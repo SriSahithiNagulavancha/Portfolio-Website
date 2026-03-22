@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import BackToTop from "./components/BackToTop";
+import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
+import About from "./Components/About";
+import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+import BackToTop from "./Components/BackToTop";
 import LoadingScreen from "./Components/LoadingScreen";
 
 import "./style.css";
@@ -27,12 +27,10 @@ function App() {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1200 );
+    }, 1200);
 
     return () => clearTimeout(timer);
-
   }, []);
-
 
   useEffect(() => {
     if (theme === "light") {
@@ -80,7 +78,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white transition-colors duration-300 light:bg-slate-50 light:text-slate-900">
-      
       <Navbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
