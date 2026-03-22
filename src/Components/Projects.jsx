@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 
 import { ExternalLink, Github, Globe, ListTodo, CloudSun } from "lucide-react";
 
+import portfolioImg from "../assets/projects/portfolio.png";
+import todoImg from "../assets/projects/to-do list.png";
+import weatherImg from "../assets/projects/weather.png";
+
+
 function Projects() {
   const projects = [
     {
@@ -10,7 +15,7 @@ function Projects() {
       tech: ["React", "Tailwind", "Vite"],
       live: "https://professionalportfolio-website.netlify.app/",
       code: "https://github.com/SriSahithiN/Portfolio-Website",
-      image: "https://dummyimage.com/600x400/0f172a/38bdf8&text=Portfolio+Website",
+      image: portfolioImg,
       icon: Globe,
     },
     {
@@ -19,8 +24,7 @@ function Projects() {
       tech: ["JavaScript", "DOM"],
       live: "https://srisahithi-todolist.netlify.app/",
       code: "https://github.com/SriSahithiN/To-Do-List-App",
-      image:
-        "https://cdn.dribbble.com/userupload/15316196/file/original-00428b7106f572ab30249a7237118c6f.png?format=webp&resize=400x300&vertical=center",
+      image: todoImg,
       icon: ListTodo,
     },
     {
@@ -29,8 +33,7 @@ function Projects() {
       tech: ["API", "Async JavaScript"],
       live: "https://srisahithi-weatherapp.netlify.app/",
       code: "https://github.com/SriSahithiN/Weather-App",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1200&q=80",
+      image: weatherImg,
       icon: CloudSun,
     },
   ];
