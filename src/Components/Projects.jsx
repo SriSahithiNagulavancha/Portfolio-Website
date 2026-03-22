@@ -8,7 +8,7 @@ function Projects() {
       title: "Portfolio Website",
       desc: "A personal portfolio website built to showcase my projects, skills, and contact information.",
       tech: ["React", "Tailwind", "Vite"],
-      live: "https://srisahithi-portfolio.netlify.app/",
+      live: "https://professionalportfolio-website.netlify.app/",
       code: "https://github.com/SriSahithiN/Portfolio-Website",
       image: "https://dummyimage.com/600x400/0f172a/38bdf8&text=Portfolio+Website",
       icon: Globe,
