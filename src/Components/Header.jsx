@@ -22,7 +22,7 @@ function Header() {
           Web Developer Portfolio
         </p>
 
-        <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white md:text-6xl light:text-slate-900">
+        <h1 className="mt-5 text-3xl font-extrabold leading-tight text-white md:text-6xl light:text-slate-900">
           Sri Sahithi
           <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent light:from-cyan-600 light:to-blue-700">
             Nagulavancha
@@ -38,7 +38,7 @@ function Header() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
 
           <a
             href="#projects"

@@ -6,7 +6,7 @@ function Navbar({
   theme,
   toggleTheme,
 }) {
-  const links = ["about", "skills", "projects", "contact"];
+  const links = ["about", "skills", "experience", "certifications", "projects", "contact"];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl transition-colors duration-300 light:border-slate-200 light:bg-white/80">
@@ -37,7 +37,6 @@ function Navbar({
               href={`#${item}`}
               onClick={onNavClick}
               className={`rounded-xl px-4 py-2 text-sm capitalize transition ${
-                
                 activeSection === item
                   ? "bg-cyan-500/15 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.10)] light:bg-cyan-100 light:text-cyan-700"
                   : "text-slate-300 hover:bg-white/5 hover:text-white light:text-slate-600 light:hover:bg-slate-100 light:hover:text-slate-900"
@@ -67,20 +66,20 @@ function Navbar({
       </div>
 
       <div
-        className={`overflow-hidden transition-all duration-300 md:hidden ${
-          menuOpen ? "max-h-96 border-t border-white/10 light:border-slate-200" : "max-h-0"
+      className={`overflow-hidden transition-all duration-300 md:hidden ${
+        menuOpen ? "max-h-96 border-t border-white/10 light:border-slate-200" : "max-h-0"
         }`}
       >
-        <div className="space-y-2 bg-slate-950/95 px-4 py-4 light:bg-white">
+        <div className="space-y-3 bg-slate-950/95 px-4 py-4 light:bg-white">
           {links.map((item) => (
             <a
               key={item}
               href={`#${item}`}
               onClick={onNavClick}
-              className={`rounded-xl px-4 py-2 text-sm capitalize transition ${
-                  activeSection === item
-                    ? "bg-cyan-500/15 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.10)] light:bg-cyan-100 light:text-cyan-700"
-                    : "text-slate-300 hover:bg-white/5 hover:text-white light:text-slate-600 light:hover:bg-slate-100 light:hover:text-slate-900"
+              className={`rounded-xl px-4 py-3 text-base capitalize transition ${
+                activeSection === item
+                  ? "bg-cyan-500/15 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.10)] light:bg-cyan-100 light:text-cyan-700"
+                  : "text-slate-300 hover:bg-white/5 hover:text-white light:text-slate-600 light:hover:bg-slate-100 light:hover:text-slate-900"
               }`}
             >
               {item}

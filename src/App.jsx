@@ -10,6 +10,9 @@ import Footer from "./Components/Footer";
 import BackToTop from "./Components/BackToTop";
 import LoadingScreen from "./Components/LoadingScreen";
 
+import Experience from "./Components/Experience";
+import Certifications from "./Components/Certifications";
+
 import "./style.css";
 
 function App() {
@@ -89,9 +92,11 @@ function App() {
 
       <Header />
 
-      <main className="mx-auto max-w-6xl px-4">
+      <main className="mx-auto max-w-6xl px-4 sm:px-6">
         <About />
         <Skills />
+        <Experience />
+        <Certifications />
         <Projects />
         <Contact />
       </main>

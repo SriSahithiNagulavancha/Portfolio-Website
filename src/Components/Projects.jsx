@@ -39,7 +39,7 @@ function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-16 sm:py-20">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400 light:text-cyan-700">
           Projects
@@ -49,7 +49,7 @@ function Projects() {
           Some things I&apos;ve built
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => {
             const Icon = project.icon;
 
