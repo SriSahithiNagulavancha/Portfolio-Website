@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 import { ExternalLink, Github, Globe, ListTodo, CloudSun } from "lucide-react";
 
+import { fadeUp, staggerContainer } from "../utils/animations";
+
 import portfolioImg from "../assets/projects/portfolio.png";
 import todoImg from "../assets/projects/to-do list.png";
 import weatherImg from "../assets/projects/weather.png";
@@ -49,22 +51,22 @@ function Projects() {
           Some things I&apos;ve built
         </h2>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => {
+        <motion.div
+         variants={staggerContainer}
+         initial="hidden"
+         whileInView="show"
+         viewport={{ once: true }}
+         className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
+        >
+
+          {projects.map((project) => {
             const Icon = project.icon;
 
             return (
               <motion.article
                 key={project.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                  delay: index * 0.1,
-                }}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-[0_20px_60px_rgba(34,211,238,0.18)] light:border-slate-200 light:bg-white light:hover:shadow-[0_20px_60px_rgba(14,165,233,0.12)]"
+                variants={fadeUp}
+                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-[0_20px_60px_rgba(34,211,238,0.18)]"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -73,7 +75,7 @@ function Projects() {
                     className="h-52 w-full object-cover transition duration-700 group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent light:from-slate-900/20 light:via-transparent light:to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent " />
 
                   <div className="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 text-white shadow-lg shadow-cyan-500/30">
                     <Icon size={22} />
@@ -81,51 +83,36 @@ function Projects() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white transition group-hover:text-cyan-300 light:text-slate-900 light:group-hover:text-cyan-700">
+                  <h3 className="text-xl font-semibold text-white transition group-hover:text-cyan-300 light:text-slate-900 ">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-slate-400 light:text-slate-600">
+                  <p className="mt-3 text-sm text-slate-400 light:text-slate-600">
                     {project.desc}
                   </p>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tech.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-white/10 bg-slate-900/70 px-3 py-1 text-xs text-slate-300 transition group-hover:border-cyan-400/30 light:border-slate-200 light:bg-slate-100 light:text-slate-700"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-
                   <div className="mt-6 flex gap-3">
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-cyan-400"
-                    >
-                      <ExternalLink size={16} />
-                      Live
-                    </a>
+                    <a href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl bg-cyan-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:scale-[1.03] active:scale-[0.97] hover:bg-cyan-400"
+                  >
+                    Live
+                  </a>
 
-                    <a
-                      href={project.code}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10 light:border-slate-300 light:bg-slate-50 light:text-slate-900 light:hover:bg-slate-100"
-                    >
-                      <Github size={16} />
-                      Code
-                    </a>
-                  </div>
+                   <a href={project.code}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl border border-white/15 px-4 py-2 text-sm text-white transition hover:scale-[1.03] active:scale-[0.97] hover:bg-white/10 light:border-slate-300 light:text-slate-900"
+                  >
+                    Code
+                  </a>
                 </div>
+              </div>
               </motion.article>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

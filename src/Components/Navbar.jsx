@@ -6,7 +6,7 @@ function Navbar({
   theme,
   toggleTheme,
 }) {
-  const links = ["about", "skills", "experience", "certifications", "projects", "contact"];
+  const links = ["about", "skills", "experience", "certifications", "projects", "github", "contact"];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl transition-colors duration-300 light:border-slate-200 light:bg-white/80">
@@ -21,7 +21,7 @@ function Navbar({
 
         <button
           type="button"
-          className="rounded-xl border border-white/10 px-3 py-2 text-white md:hidden light:border-slate-300 light:text-slate-900"
+          className="rounded-xl border border-white/10 px-3 py-2 text-white md:hidden light:border-slate-300 light:text-slate-900 hover:scale-[1.03] active:scale-[0.97]"
           onClick={() => {
             toggleTheme();
             setMenuOpen(false);
@@ -58,7 +58,7 @@ function Navbar({
             type="button"
             aria-label="Toggle Theme"
             onClick={toggleTheme}
-            className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:bg-white/10 light:border-slate-300 light:bg-white light:text-slate-900 light:hover:bg-slate-100"
+            className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:bg-white/10 light:border-slate-300 light:bg-white light:text-slate-900 light:hover:bg-slate-100 hover:scale-[1.03] active:scale-[0.97]"
           >
             {theme === "light" ? "☀️" : "🌙"}
           </button>
@@ -97,7 +97,7 @@ function Navbar({
           <button
             type="button"
             onClick={toggleTheme}
-            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-sm text-white light:border-slate-300 light:bg-slate-50 light:text-slate-900"
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-sm text-white light:border-slate-300 light:bg-slate-50 light:text-slate-900 hover:scale-[1.03] active:scale-[0.97]"
           >
             {theme === "light" ? "☀️ Light Mode" : "🌙 Dark Mode"}
           </button>

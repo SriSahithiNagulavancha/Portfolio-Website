@@ -42,14 +42,14 @@ function Header() {
 
           <a
             href="#projects"
-            className="rounded-2xl bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:scale-[1.03] hover:bg-cyan-400 hover:shadow-[0_16px_40px_rgba(34,211,238,0.25)]"
+            className="rounded-2xl bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:scale-[1.03] active:scale-[0.97] hover:bg-cyan-400 hover:shadow-[0_16px_40px_rgba(34,211,238,0.25)]"
           >
             View Projects
           </a>
 
           <a
             href="#contact"
-            className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:scale-[1.03] hover:bg-white/10 light:border-slate-300 light:bg-white light:text-slate-900 light:hover:bg-slate-100"
+            className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:scale-[1.03] active:scale-[0.97] hover:bg-white/10 light:border-slate-300 light:bg-white light:text-slate-900 light:hover:bg-slate-100"
           >
             Contact Me
           </a>
@@ -58,7 +58,7 @@ function Header() {
             href="/assets/SriSahithiN-Resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:scale-[1.03] hover:bg-white/10 light:border-slate-300 light:bg-white light:text-slate-900 light:hover:bg-slate-100"
+            className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:scale-[1.03] active:scale-[0.97] hover:bg-white/10 light:border-slate-300 light:bg-white light:text-slate-900 light:hover:bg-slate-100"
           >
             Resume
           </a>

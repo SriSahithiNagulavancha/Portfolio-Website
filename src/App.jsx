@@ -7,8 +7,12 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+
 import BackToTop from "./Components/BackToTop";
 import LoadingScreen from "./Components/LoadingScreen";
+import CustomCursor from "./Components/CustomCursor";
+
+import GitHubStats from "./Components/GithubStats";
 
 import Experience from "./Components/Experience";
 import Certifications from "./Components/Certifications";
@@ -81,6 +85,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white transition-colors duration-300 light:bg-slate-50 light:text-slate-900">
+
+       <CustomCursor />
+      <LoadingScreen isVisible={loading} />
+      
       <Navbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
@@ -98,11 +106,16 @@ function App() {
         <Experience />
         <Certifications />
         <Projects />
+
+        <GitHubStats />
+
         <Contact />
       </main>
 
       <Footer />
       <BackToTop show={showToTop} />
+
+     
     </div>
   );
 }
