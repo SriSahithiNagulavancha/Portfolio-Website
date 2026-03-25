@@ -6,6 +6,9 @@ html {
   scroll-behavior: smooth;
 }
 
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background: #020617;
@@ -16,6 +19,11 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
