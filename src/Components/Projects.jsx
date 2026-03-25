@@ -5,7 +5,7 @@ import { ExternalLink, Github, Globe, ListTodo, CloudSun } from "lucide-react";
 import { fadeUp, staggerContainer } from "../utils/animations";
 
 import portfolioImg from "../assets/projects/portfolio.png";
-import todoImg from "../assets/projects/to-do list.png";
+import todoImg from "../assets/projects/to-do-list.png";
 import weatherImg from "../assets/projects/weather.png";
 
 

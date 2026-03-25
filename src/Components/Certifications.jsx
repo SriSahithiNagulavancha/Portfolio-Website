@@ -87,6 +87,4 @@ function Certifications() {
   );
 }
 
-  ew1
-
 export default Certifications;
