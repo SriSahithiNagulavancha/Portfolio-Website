@@ -1,23 +1,17 @@
 import { useEffect, useState } from "react";
-
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
-
-import BackToTop from "./Components/BackToTop";
-import LoadingScreen from "./Components/LoadingScreen";
-import CustomCursor from "./Components/CustomCursor";
-
-import GitHubStats from "./Components/GithubStats";
-
 import Experience from "./Components/Experience";
 import Certifications from "./Components/Certifications";
-
-import "./style.css";
+import Projects from "./Components/Projects";
+import GitHubStats from "./Components/GitHubStats";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+import BackToTop from "./Components/BackToTop";
+import CustomCursor from "./Components/CustomCursor";
+import LoadingScreen from "./Components/LoadingScreen";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +20,15 @@ function App() {
   const [activeSection, setActiveSection] = useState("about");
   const [loading, setLoading] = useState(true);
 
-  const sections = ["about", "skills", "projects", "contact"];
+  const sections = [
+    "about",
+    "skills",
+    "experience",
+    "certifications",
+    "projects",
+    "github",
+    "contact",
+  ];
 
   useEffect(() => {
     window.history.scrollRestoration = "manual";
@@ -58,6 +60,7 @@ function App() {
       sections.forEach((id) => {
         const el = document.getElementById(id);
         if (!el) return;
+
         const top = el.getBoundingClientRect().top;
         if (top <= 140) current = id;
       });
@@ -68,7 +71,9 @@ function App() {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleNavClick = () => {
@@ -85,10 +90,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white transition-colors duration-300 light:bg-slate-50 light:text-slate-900">
-
-       <CustomCursor />
+      <CustomCursor />
       <LoadingScreen isVisible={loading} />
-      
+
       <Navbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
@@ -106,16 +110,12 @@ function App() {
         <Experience />
         <Certifications />
         <Projects />
-
         <GitHubStats />
-
         <Contact />
       </main>
 
       <Footer />
       <BackToTop show={showToTop} />
-
-     
     </div>
   );
 }
