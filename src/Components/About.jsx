@@ -11,6 +11,8 @@ function About() {
           initial="hidden"
           whileInView="show">
 
+      
+          
           <h2 className="text-3xl font-bold">
             About Me
           </h2>
